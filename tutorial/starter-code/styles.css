@@ -27,6 +27,7 @@ header {
   /* vh is the viewheight, you should use this VERY sparingly, this situation is ok because we're limiting what the user can do */
   /* we'll minus 150px as this is the height we have manually defined the header and footer to be combined (100px + 50px)*/
   /* If we changed the height of the header and footer we'd have to change this here too! */
+  min-height: calc(100vh - 150px);
 }
 
 /* TODO Show the impact of changing the flex values */
@@ -47,6 +48,13 @@ header {
   /* This is again slightly janky and will have to be updated if we change the size of the header and footer */
 
   /* TODO force the div to create a scrollbar instead of increasing its vertical height */
+  max-height: calc(100vh - 150px);
+  overflow: auto;
+}
+
+.left-column-content::-webkit-scrollbar {
+  width: 0; /* Hide the scrollbar's width */
+  height: 0; /* Hide the scrollbar's height */
 }
 
 /* TODO hide the scrollbar on the left-column-content*/
@@ -87,15 +95,32 @@ footer {
 }
 
 svg {
-  background-color: #444;
+  background-color: #555;
 }
 
 /* TODO add css classes for active-verse and active-line */
+.active-verse {
+  font-weight: 900;
+  color: #555;
+}
 
+.active-line {
+  color: black;
+}
 /* TODO add css to create filler verse  */
-
+.filler-verse {
+  height: 500px;
+}
 /* TODO add css class to make "red" span clickable */
-
+.red-span {
+  cursor: pointer;
+}
 /* TODO add css class to make red-text text red */
+.red-text {
+  color: red;
+}
 
+.bar:hover {
+  fill: #aaa;
+}
 /* TODO illustrate how to use css classes to interact with d3 elements */
