@@ -66,8 +66,8 @@ function drawMap(geoData, countryName = "", title = "") {
         .attr("d", path)
     map.append("text")
         .attr("class", "inner-title")
-        .attr("dy", "10em") // Adjust the vertical position as needed
-        .attr("dx", "15em")
+        .attr("dy", "12em") // Adjust the vertical position as needed
+        .attr("dx", "20em")
         .attr("text-anchor", "middle")
         .attr("fill", "white")
         .attr("font-size", "18px")
