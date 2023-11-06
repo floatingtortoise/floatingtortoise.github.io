@@ -372,25 +372,28 @@ function drawBarChart(data, countryName = "", title = "") {
     let colourScale = d3.scaleLinear().domain([0, d3.max(feature, function(d){
         return parseInt(d.Applied);})]).range(["lightblue", "blue"]);
     var chart = svg.append('g')
+    let maxApplied = d3.max(feature, function(d) {
+        return parseInt(d.Applied);
+    });
     var w =  width/3/feature.length;
-    var Hratio = w*4.5;
+    var Hratio = (height-200) / maxApplied;
     console.log(Hratio)
     chart.selectAll("rect")
         .data(feature)
         .enter()
         .append("rect")
         .attr("width", w)
-        .attr("height", function(d){
-            return d.Applied/Hratio;
+        .attr("height", function(d) {
+            return d.Applied * Hratio; // Scale the height
         })
-        .attr("x", function(d, i){
-            return (w+60) * i + 170;
+        .attr("x", function(d, i) {
+            return (w + 60) * i + 170;
         })
-        .attr("y", function(d){
-            return height/1.2 - d.Applied/Hratio;
+        .attr("y", function(d) {
+            return height / 1.2 - d.Applied * Hratio; // Scale the position
         })
-        .attr("fill", function(d){
-            var f = colourScale(d.Applied)
+        .attr("fill", function(d) {
+            var f = colourScale(d.Applied);
             return f;
         });
     
@@ -605,7 +608,7 @@ function createLineChart(data, countryName) {
       .attr('dy', margin.left - 80)
       .style('text-anchor', 'middle')
       .style('fill', 'white')
-      .text(`Number of refugees from ${countryName}`)
+      .text(`#  of  refugees  from  ${countryName}`)
       .style('font-size', '25px');
   
     // Create the line generator
@@ -629,20 +632,21 @@ async function initialise() {
     await loadData();
     // initalise the SVG
     initialiseSVG();
-    currentCountry = "Venezuela";
+    keyframeIndex = 0;
     drawKeyframe(keyframeIndex);
     }
 
 document.getElementById("forward-button").addEventListener("click", forwardClicked);
 document.getElementById("backward-button").addEventListener("click", backwardClicked);
 
-initialise();
 
 
 function toggleDropdown() {
     var dropdown = document.getElementById("myDropdown");
     if (dropdown.style.display === "block") {
       dropdown.style.display = "none";
+      console.log("not here");
+      
     } else {
       dropdown.style.display = "block";
     }
@@ -661,8 +665,7 @@ function toggleDropdown() {
 
 function setCountry(name) {
     currentCountry = name; // Set the countryName based on the selected option
+    initialise();
     toggleDropdown(); // Close the dropdown
-    // You can perform any actions with the selected country here
-    console.log('Selected country: ' + countryName);
   }
   
