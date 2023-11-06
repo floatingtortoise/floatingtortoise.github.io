@@ -92,40 +92,46 @@ table{
 #table1{
   font-size:20px;
   color: white;
-  td, th{
-    padding: 15px 30px;
-    color: black;
-  }
-  th{
-    margin-top: 30px;
-    background-color:#dd7555;
-  }
-  td{
-    background-color: #f3d1c7;
-  }
 }
 
+#table1 th{
+  margin-top: 30px;
+  background-color:#dd7555;
+  padding: 15px 30px;
+  color: black;
+}
+
+#table1 td{
+  background-color: #f3d1c7;
+  padding: 15px 30px;
+  color: black;
+}
 
 #table2{
+  text-align: center;
+  margin: 100px auto;
   color: white;
-  td, th{
-    padding: 8px 30px;
+}
+
+#table2 th{
+  padding: 8px 30px;
     line-height: 20px;
     background-color: black;
     font-size:13.7px;
-  }
-  th{
-    border-bottom: #b92b2b solid 1px;
+  border-bottom: #b92b2b solid 1px;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 10px;
-  }
-  td{
-    border-top: #b92b2b solid 1px;
-    padding-top: 15px;
-  }
 }
 
+#table2 td{
+  padding: 8px 30px;
+  line-height: 20px;
+  background-color: black;
+  font-size:13.7px;
+  border-top: #b92b2b solid 1px;
+  padding-top: 15px;
+}
 
 rect{
   stroke-width: 1px;
