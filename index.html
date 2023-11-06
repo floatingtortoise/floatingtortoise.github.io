@@ -7,12 +7,75 @@
   </head>
   <body>
     <header>
-      <h1 class="title">Static Vis: The Refugee Story in Venezuela</h1>
+      <h1 class="title">A broken doorknob - A refugee's monologue</h1>
+      <div class="dropdown">
+        <button class="btn" onclick="toggleDropdown()">Origin Country</button>
+        <div class="content" id="myDropdown">
+          <a href="#" onclick="setCountry('Afghanistan')">Afghanistan</a>
+          <a href="#" onclick="setCountry('South Sudan')">South Sudan</a>
+          <a href="#" onclick="setCountry('Ukraine')">Ukraine</a>
+          <a href="#" onclick="setCountry('Venezuela')">Venezuela</a>
+        </div>
+      </div>
     </header>
     <main class="wrapper">
+      <div class="left-column">
+        <div class="left-column-content">
+          <ul class="verse" id="verse1">
+            <li class="line" id="line1">the umbilical cord is cut off</span></li>
+            <li class="line" id="line2">mama's gaze passes through the second/minute/hour hand</li>
+            <li class="line" id="line3">flows into the first sound of cry</li>
+            <li class="line" id="line4">on the ploughland between Tigris and Euphrates</li>
+            <li class="line" id="line5">the door opens a crack for me; flapping its wings, dawn</li>
+            <li class="line" id="line6">enters the eyes</li>
+          </ul>
+
+          <ul class="verse" id="verse2">
+            <li class="line" id="line1">are closed, however.</span></li>
+            <li class="line" id="line2">night flees at the first debris</li>
+            <li class="line" id="line3">the color of sumac turns into the bell of death ever since</li>
+            <li class="line" id="line4">they load the textbooks into guns/ ink burnt to dust</li>
+            <li class="line" id="line5">I believe/no more/believe in—</li>
+            <li class="line" id="line6">The umbilical cord is cut off.</li>
+          </ul>
+
+          <ul class="verse" id="verse3">
+            <li class="line" id="line1">once a year, the tenth year</span></li>
+            <li class="line" id="line2">I am shut outside of the door</li>
+            <li class="line" id="line3">once a year, the tenth year</li>
+            <li class="line" id="line4">the navy costume intrudes on my dream, I grab the collar,</li>
+            <li class="line" id="line5">“Prove yourself” it commands, I’m a self without a past.</li>
+            <li class="line" id="line6">knees on the floor, another layer of callus grows over the door frame
+            </li>
+          </ul>
+
+          <ul class="verse" id="verse4">
+            <li class="line" id="line1">ten years from now/forever/back to childhood</span></li>
+            <li class="line" id="line2">711’s hotdogs are floating on Hudson river/today’s lunch</li>
+            <li class="line" id="line3">got cold, my stomach is calling sumac spiced chickpea</li>
+            <li class="line" id="line4">Mama, I’m home</li>
+            <li class="line" id="line5">no sound inside the house</li>
+            <li class="line" id="line6">mama –</li>
+          </ul>
+
+          <ul class="verse" id="verse5">
+            <li class="line" id="line1" style="color: black"> / </li>
+            <li class="line" id="line2" style="color: black"> / </li>
+            <li class="line" id="line3">Ten years, I’ve not been able to turn the doorknob again</span></li>
+            <li class="line" id="line4" style="color: black"> / </li>
+            <li class="line" id="line5" style="color: black"> / </li>
+            <li class="line" id="line6" style="color: black"> / </li>
+          </ul>
+
+        </div>
+      </div>
+      <div class="right-column">
       <svg class="svg" id="svg"></svg>
+      </div>
     </main>
     <footer>
+      <button class="arrow-button" id="backward-button">◄</button>
+      <button class="arrow-button" id="forward-button">►</button>
     </footer>
     <script src="main.js"></script>
   </body>
