@@ -24,10 +24,6 @@ header {
   padding: 0 20px; /* Add padding to the header for spacing */
 }
 
-#btn{
-  font-family: Copperplate, Copperplate Gothic Light, fantasy;
-  font-size: 20px;
-}
 
 .wrapper {
   display: flex; /* Allows us to position things inside this div with more freedom, see https://css-tricks.com/snippets/css/a-guide-to-flexbox/ for more details*/
@@ -202,8 +198,9 @@ footer {
 .dropdown .content {
   display: none;
   position: absolute;
-  min-width: 160px;
+  min-width: 533px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  font-size: 20px;
   z-index: 1;
 }
 
