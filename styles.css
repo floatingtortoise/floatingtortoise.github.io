@@ -198,7 +198,7 @@ footer {
 .dropdown .content {
   display: none;
   position: absolute;
-  min-width: 533px;
+  min-width: 527px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   font-size: 20px;
   z-index: 1;
