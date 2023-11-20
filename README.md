@@ -5,6 +5,8 @@ Hi! Welcome to my data visualization project on refugee issue. For this project,
 Please click on this link to access the visualization: https://floatingtortoise.github.io/ 
 
 
+
+
 Deploying locally: 
 
 Option 1: If you would like to run the code locally using Visual Studio Code, I recommend you adding the "Live Server" extension to the IDE. Then, right click on the index.html file and select "Open With Live Server", which will run the code locally on a browser.
